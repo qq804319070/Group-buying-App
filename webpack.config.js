@@ -19,5 +19,10 @@ module.exports = {
             template:'./app/index.html'
         })
     ],
-    devtool:'source-map'
+    devtool:'source-map',
+    devServer:{
+        proxy:{
+            '/api':'http://localhost:3000' //访问路径是以api开头的跳到以3000端口的去访问,实现跨域
+        }
+    }
 };
