@@ -1,6 +1,5 @@
 ## 团购App
-### 技术栈
-
+### 技术栈:
 - react
 - react-router4
 - redux
@@ -9,4 +8,3 @@
 - babel
 - fetch
 - express
-
