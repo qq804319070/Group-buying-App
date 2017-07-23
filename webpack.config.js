@@ -11,6 +11,7 @@ module.exports = {
         rules:[
             {test:/\.less$/,use:['style-loader','css-loader','less-loader']},
             {test:/\.js$/,use:'babel-loader',exclude:/node_modules/},
+            {test:/\.(png|jpg|gif)$/,use:'url-loader'}
         ]
     },
     plugins:[
