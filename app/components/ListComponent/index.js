@@ -35,7 +35,7 @@ class ListComponent extends Component {
                         <Listitem key={index} data={item}/>
                     ))
                 }
-                <div className="more" onClick={() => this.props.loadMore()} ref="scroll">
+                <div className="more"  ref="scroll">
                     {
                         this.props.hasMore ?
                             this.props.loading ? <div>加载中</div> : <div>加载更多</div> : <div>我是有底线的</div>
