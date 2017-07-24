@@ -9,8 +9,11 @@ export function getList(city, page) {
     return get(`/api/list/${city}/${page}`)
 }
 
+
+
 /*
  get().then(res.json()).then(data=>{
  console.log(data);
  });
  */
+

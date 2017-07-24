@@ -21,9 +21,9 @@ class Detail extends Component {
         return (
             <div>
                 {/*头部*/}
-                <HeaderComponent title="商户详情"  history={this.props.history}/>
+                <HeaderComponent title="商户详情" history={this.props.history}/>
                 {/*商户信息*/}
-                    <Info/>
+                <Info id={this.props.match.params.id}/>
                 {/*购买和收藏按钮*/}
 
                 {/*评论*/}
