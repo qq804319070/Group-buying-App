@@ -28,15 +28,5 @@ module.exports = [
         "title":"服务",
         "img":"//gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/bainuo/crop%3D10%2C0%2C1981%2C1200%3Bw%3D719%3Bq%3D99/sign=a8e8a683998fa0ec6b883e4d1ba669c2/1c950a7b02087bf4c0e93359fad3572c11dfcf7d.jpg",
         "link":"http://www.baidu.com"
-    },
-    {
-        "title":"自助餐",
-        "img":"//gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/bainuo/crop%3D0%2C21%2C690%2C418%3Bw%3D470%3Bq%3D79/sign=241fb660db1373f0e17035df993f67c9/9f2f070828381f301c78a3b2a3014c086e06f04c.jpg",
-        "link":"http://www.baidu.com"
-    },
-    {
-        "title":"温泉洗浴",
-        "img":"//gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/bainuo/crop%3D0%2C0%2C800%2C484%3Bw%3D720%3Bq%3D80/sign=19d0bb06ad18972bb7755a8adbfd57b9/b90e7bec54e736d1e6e80b1a9d504fc2d562692d.jpg",
-        "link":"http://www.baidu.com"
     }
 ];

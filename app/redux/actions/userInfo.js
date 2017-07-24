@@ -8,5 +8,3 @@ export function update(data) {
         data
     }
 }
-
-

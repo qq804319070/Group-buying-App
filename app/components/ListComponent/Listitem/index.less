@@ -1,0 +1,41 @@
+.list-item {
+  display: flex;
+  line-height: 25px;
+  margin: 10px;
+  div {
+    img {
+      width: 120px;
+      height: 90px;
+    }
+    margin-right: 10px;
+  }
+
+  .list-item-content{
+    position: relative;
+    width: 100%;
+    strong {
+      color: red;
+    }
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp:2;
+      -webkit-box-orient: vertical;
+      height: 50px;
+    }
+    .distance {
+      position: absolute;
+      right: 5px;
+      top: 0;
+    }
+    div {
+      display: flex;
+
+      justify-content: space-between;
+      span {
+        color: #ccc;
+      }
+    }
+  }
+}

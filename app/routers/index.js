@@ -1,22 +1,21 @@
 import React, {Component} from 'react'
-import {HashRouter as Router,Route} from 'react-router-dom'
+import {HashRouter as Router, Route, Switch} from 'react-router-dom'
 import Home from "../pages/Home/index";
-
+import Detail from "../pages/Detail/index";
 
 
 class RouterMap extends Component {
 
-  render() {
-    return (
-      <div>
-          <Router>
-              <div>
-                  <Route path='/' component={Home}/>
-              </div>
-          </Router>
-      </div>
-    )
-  }
+    render() {
+        return (
+            <Router>
+                <Switch>
+                    <Route exact path='/' component={Home}/>
+                    <Route path='/detail/:id' component={Detail}/>
+                </Switch>
+            </Router>
+        )
+    }
 }
 
 export default RouterMap
