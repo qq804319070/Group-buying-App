@@ -29,6 +29,7 @@ class Ad extends Component {
     render() {
         return (
             <div className="ad">
+                <h3>超值特惠</h3>
                 {this.state.data.length === 0 ? '正在加载...' :
                     this.state.data.map((item, index) => {
                         return (
