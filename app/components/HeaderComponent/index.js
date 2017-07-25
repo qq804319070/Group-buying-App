@@ -2,8 +2,13 @@ import React, {Component} from 'react'
 import './index.less'
 class HeaderComponent extends Component {
 
+
     goBack = () => {
-        this.props.history.go(-1)
+        if (this.props.back) {
+            this.props.history.push(this.props.back)
+        } else {
+            this.props.history.go(-1)
+        }
     };
 
     render() {

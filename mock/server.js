@@ -12,9 +12,7 @@ app.get('/api/ad', function (req, res) {
 let list = require('./home/list');
 //获取列表 需要传递城市
 app.get('/api/list/:city/:page/', function (req, res) {
-    setTimeout(function () {
         res.send(list)
-    }, 1000);
 });
 
 let info = require('./detail/info');
