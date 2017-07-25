@@ -43,7 +43,7 @@ class Login extends Component {
         //如果是详情页面跳转过来的
         if (this.props.match.params.route) {
             console.log(this.props.match.params.route);
-            this.props.history.push(encodeURIComponent(this.props.match.params.route))
+            this.props.history.push(decodeURIComponent(this.props.match.params.route))
         } else {
             this.props.history.push('/user')
         }

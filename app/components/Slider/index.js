@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import ReactSwipe from 'react-swipe';
 import './index.less'
+import {Link} from 'react-router-dom'
 
 class Slider extends Component {
     constructor() {
@@ -9,6 +10,13 @@ class Slider extends Component {
             index: 0
         }
     }
+
+    handleSerch = (e) => {
+        let tag = e.target.tagName;
+        if (tag === 'I' || tag === 'SPAN' || tag === 'LI') {
+            window.location = '/#/search/all/aas'
+        }
+    };
 
     render() {
         let options = {
@@ -22,7 +30,7 @@ class Slider extends Component {
         return (
             <div>
                 <ReactSwipe className="carousel" swipeOptions={options}>
-                    <div className="swiper">
+                    <div className="swiper" onClick={this.handleSerch}>
                         <ul className="clear">
                             <li>
                                 <i className="iconfont icon-canyin"></i>
@@ -58,7 +66,7 @@ class Slider extends Component {
                             </li>
                         </ul>
                     </div>
-                    <div className="swiper">
+                    <div className="swiper" onClick={this.handleSerch}>
                         <ul className="clear">
                             <li>
                                 <i className="iconfont icon-canyin"></i>
@@ -94,7 +102,7 @@ class Slider extends Component {
                             </li>
                         </ul>
                     </div>
-                    <div className="swiper">
+                    <div className="swiper" onClick={this.handleSerch}>
                         <ul className="clear">
                             <li>
                                 <i className="iconfont icon-canyin"></i>
