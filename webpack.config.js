@@ -1,5 +1,7 @@
 let path = require('path');
 let HtmlPlugin = require('html-webpack-plugin');
+let ExtractTextPlugin = require('extract-text-webpack-plugin');
+let extract = new ExtractTextPlugin('index.css');
 
 module.exports = {
     entry: './app/index.js',
@@ -9,7 +11,13 @@ module.exports = {
     },
     module:{
         rules:[
-            {test:/\.less$/,use:['style-loader','css-loader','less-loader']},
+            {test:/\.less$/,use:extract.extract( ['css-loader',{loader:'postcss-loader',
+                options:{
+                plugins:[
+                    require('autoprefixer')
+                ]
+                }
+            },'less-loader'])},
             {test:/\.js$/,use:'babel-loader',exclude:/node_modules/},
             {test:/\.(png|jpg|gif)$/,use:'url-loader'}
         ]
@@ -18,7 +26,8 @@ module.exports = {
         new HtmlPlugin({
             title:'团购App',
             template:'./app/index.html'
-        })
+        }),
+        extract
     ],
     devtool:'source-map',
     devServer:{

@@ -4,7 +4,7 @@ let express = require('express'),
     app = express();
 app.listen(3000);
 let bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.urlencoded({extended: true}));
 
 let ad = require('./home/ad');
 //广告的接口
@@ -40,10 +40,17 @@ app.get('/api/orderlist/:id', function (req, res) {
 });
 
 //提交评论
-app.post('/api/comment',function (req,res) {
-    console.log(req.body);
-    res.send({msg:'ok'})
+app.post('/api/comment', function (req, res) {
+    res.send({msg: 'ok'})
 });
+
+let searchInfo = require('./search/index');
+app.get('/api/search/:kind/:keyWord', function (req, res) {
+    res.send(searchInfo)
+});
+
+
+
 
 //fetch(url,{
 //  Accept:"application/json"

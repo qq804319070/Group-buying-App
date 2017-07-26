@@ -14,7 +14,7 @@ class Slider extends Component {
     handleSerch = (e) => {
         let tag = e.target.tagName;
         if (tag === 'I' || tag === 'SPAN' || tag === 'LI') {
-            window.location = '/#/search/all/aas'
+            window.location = '/#/search/cate'
         }
     };
 

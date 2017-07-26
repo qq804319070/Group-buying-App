@@ -11,19 +11,19 @@ class SearchInput extends Component {
     render() {
         return (
             <input type="text" value={this.state.value} onChange={this.change} onKeyUp={this.search}/>
-        )
-    }
+        )}
 
     change = (e) => {
         this.setState({
             value: e.target.value
         })
     };
-    search = (e)=>{
-        if (e.keyCode===13){
-            this.props.fn(this.state.value)
+    search = (e) => {
+        if (e.keyCode === 13) {
+            this.props.fn(this.state.value);
         }
     }
+
 }
 
 export default SearchInput
