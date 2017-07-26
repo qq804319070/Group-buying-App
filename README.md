@@ -10,6 +10,7 @@
 - express
 
 ## 运行方式
-下载依赖:npm install
-服务器端:npm run dev-node
-前端:npm start
+### 下载依赖:npm install
+### 服务器端:npm run dev-node
+### 前端:npm start
+
